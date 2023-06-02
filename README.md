@@ -1,5 +1,7 @@
 # Aldi e-commerce assignment
 
+**Live version:** https://aldi-ecom.pages.dev
+
 ## Requirements
 
 - pnpm >= 8.0.0
