@@ -8,8 +8,12 @@
 	import { cart } from '$lib';
 </script>
 
-<AppShell slotPageFooter="text-center p-1" slotPageContent="p-8">
-	<AppBar slot="header" background="bg-primary-500-400-token">
+<AppShell slotPageFooter="text-center p-1" slotPageContent="py-8 px-4">
+	<AppBar
+		slot="header"
+		background="bg-primary-500-400-token"
+		regionRowMain="max-w-7xl w-full mx-auto"
+	>
 		<a
 			href="/products"
 			slot="lead"
@@ -35,7 +39,9 @@
 			</span>
 		</a>
 	</AppBar>
-	<slot />
+	<div class="max-w-7xl w-full mx-auto">
+		<slot />
+	</div>
 	<svelte:fragment slot="pageFooter">
 		This is an assignment for ALDI International IT Services
 	</svelte:fragment>
