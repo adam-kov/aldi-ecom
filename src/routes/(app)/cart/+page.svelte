@@ -29,6 +29,11 @@
 			{formatPrice(total)}
 		</span>
 	</div>
+	<div class="flex justify-end mt-2">
+		<button type="button" class="btn-sm variant-soft-error" on:click={cart.reset}>
+			Reset cart
+		</button>
+	</div>
 {/if}
 
 <svelte:head>

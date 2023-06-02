@@ -1,5 +1,6 @@
-import { localStorageStore, toastStore } from '@skeletonlabs/skeleton';
+import { localStorageStore } from '@skeletonlabs/skeleton';
 import type { ProductData } from '.';
+import { sendToast } from '../utils';
 
 const store = localStorageStore<ProductData[]>('products', []);
 
@@ -21,9 +22,7 @@ export const products = {
 				result.success = true;
 				result.amount = product.availableAmount;
 			} else {
-				toastStore.trigger({
-					message: `The requested amount of "${product.name}" is not available`
-				});
+				sendToast(`The requested amount of "${product.name}" is not available`, 'error');
 			}
 			return products;
 		});
